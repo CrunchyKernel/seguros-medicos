@@ -1,0 +1,80 @@
+var _Elements = {"elements": {
+        "Slideshows":[
+        	{"url":"../../../backend/builder/elements/slide1.html", "height":500, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/slide1.png" }
+        ],
+        "Secciones":[
+            {"url":"../../../backend/builder/elements/cotizador.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion-cotizador.png" },
+            {"url":"../../../backend/builder/elements/seccion1.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion1.png" },
+            {"url":"../../../backend/builder/elements/seccion2.html", "height":500, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion2.png" },
+            {"url":"../../../backend/builder/elements/seccion3.html", "height":500, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion3.png" },
+            {"url":"../../../backend/builder/elements/seccion4.html", "height":300, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion4.png" },
+            {"url":"../../../backend/builder/elements/seccion5.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion5.png" },
+            {"url":"../../../backend/builder/elements/seccion6.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/seccion6.png" }
+        ],
+        "Servicios":[
+            {"url":"../../../backend/builder/elements/servicio1.html", "height":300, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/servicio1.png" },
+            {"url":"../../../backend/builder/elements/servicio2.html", "height":300, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/servicio2.png" },
+            {"url":"../../../backend/builder/elements/servicio3.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/servicio3.png" },
+            {"url":"../../../backend/builder/elements/servicio4.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/servicio4.png" },
+            {"url":"../../../backend/builder/elements/servicio5.html", "height":300, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/servicio5.png" },
+            {"url":"../../../backend/builder/elements/servicio6.html", "height":300, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/servicio6.png" }
+        ],
+        "Divisores":[
+            {"url":"../../../backend/builder/elements/divider1.html", "height":50, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/divider1.png" }
+        ],
+        "Equipo":[
+        	{"url":"../../../backend/builder/elements/team1.html", "height":200, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/team1.png" }
+        ],
+        "Tablas":[
+        	{"url":"../../../backend/builder/elements/tablaPrecio1.html", "height":600, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/tablaPrecio1.png" },
+            {"url":"../../../backend/builder/elements/tablaPrecio2.html", "height":600, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/tablaPrecio2.png" },
+            {"url":"../../../backend/builder/elements/tablaPrecio3.html", "height":600, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/tablaPrecio3.png" }
+        ],
+        "Banner":[
+            {"url":"../../../backend/builder/elements/banner1.html", "height":200, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/banner1.png" },
+            {"url":"../../../backend/builder/elements/banner2.html", "height":200, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/banner2.png" },
+            {"url":"../../../backend/builder/elements/banner3.html", "height":200, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/banner3.png" }
+        ],
+        "Tabs":[
+            {"url":"../../../backend/builder/elements/tab1.html", "height":600, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/tab1.png" },
+            {"url":"../../../backend/builder/elements/tab2.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/tab2.png" }
+        ],
+        "Mensajes":[
+            {"url":"../../../backend/builder/elements/mensajeInfo.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/mensajeInfo.png" },
+            {"url":"../../../backend/builder/elements/mensajeSuccess.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/mensajeSuccess.png" },
+            {"url":"../../../backend/builder/elements/mensajeWarning.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/mensajeWarning.png" },
+            {"url":"../../../backend/builder/elements/mensajeDanger.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/mensajeDanger.png" }
+        ],
+        "Encabezados":[
+            {"url":"../../../backend/builder/elements/encabezado1.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/encabezado1.png" },
+            {"url":"../../../backend/builder/elements/encabezado2.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/encabezado2.png" },
+            {"url":"../../../backend/builder/elements/encabezado3.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/encabezado3.png" }
+        ],
+        "Clientes":[
+            {"url":"../../../backend/builder/elements/opinion.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/opinion.png" },
+            {"url":"../../../backend/builder/elements/testimonio.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/testimonio.png" }
+        ],
+        "Portafolio":[
+            {"url":"../../../backend/builder/elements/portafolio_1.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/portafolio_1.png" },
+            {"url":"../../../backend/builder/elements/portafolio_2.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/portafolio_2.png" },
+            {"url":"../../../backend/builder/elements/portafolio_3.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/portafolio_3.png" },
+            {"url":"../../../backend/builder/elements/portafolio_4.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/portafolio_4.png" }
+        ],
+        "Bootstrap":[
+            {"url":"../../../backend/builder/elements/jumbotron.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/jumbotron.png" },
+            {"url":"../../../backend/builder/elements/pageHeader.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/pageHeader.png" },
+            {"url":"../../../backend/builder/elements/thumbsnail3.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/thumbsnail3.png" },
+            {"url":"../../../backend/builder/elements/media1.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/media1.png" },
+            {"url":"../../../backend/builder/elements/listGroup1.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/listGroup1.png" },
+            {"url":"../../../backend/builder/elements/listGroup2.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/listGroup2.png" },
+            {"url":"../../../backend/builder/elements/listGroup3.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/listGroup3.png" },
+            {"url":"../../../backend/builder/elements/panelDefault.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelDefault.png" },
+            {"url":"../../../backend/builder/elements/panelPrimary.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelPrimary.png" },
+            {"url":"../../../backend/builder/elements/panelSuccess.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelSuccess.png" },
+            {"url":"../../../backend/builder/elements/panelInfo.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelInfo.png" },
+            {"url":"../../../backend/builder/elements/panelWarning.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelWarning.png" },
+            {"url":"../../../backend/builder/elements/panelDanger.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelDanger.png" },
+            {"url":"../../../backend/builder/elements/panelTable.html", "height":400, "thumbnail":"../../../backend/builder/elements/images_post/thumbs/panelTable.png" }
+        ]
+    }
+}

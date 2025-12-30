@@ -1,0 +1,38 @@
+
+@section('contenido')
+	<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Conceptos</h4>
+                    <p>Listado con los conceptos de el cotizador</p>
+                    <div class="pull-right">
+                        <a class="tooltips actualizarTabla" data-toggle="tooltip" href="#" data-original-title="Actualizar tabla"><i class="fa fa-refresh"></i></a>
+                    </div>
+                </div><!-- panel-heading -->
+                <div class="panel-body" style="padding: 0px;">
+                    <table id="basicTable" class="table table-striped table-bordered table-hover responsive">
+                        <thead>
+                            <tr>
+                                <th class="alignCenter">#</th>
+                                <th class="alignCenter">Concepto</th>
+                                <th class="alignCenter">Tooltip</th>
+                                <th class="alignCenter">Orden</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <th class="alignCenter">#</th>
+                                <th class="alignCenter">Concepto</th>
+                                <th class="alignCenter">Tooltip</th>
+                                <th class="alignCenter">Orden</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div><!-- panel-body -->
+            </div><!-- panel -->
+        </div>
+    </div>
+    
+@stop
