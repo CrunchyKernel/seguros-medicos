@@ -5,11 +5,15 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
+		"symfony/polyfill-mbstring": "1.3.*",
+		"symfony/polyfill-php56": "1.3.*",
+		"symfony/polyfill-util": "1.3.*",
 		"thujohn/share": "dev-master",
-		"hisorange/browser-detect": "1.*",
-		"chumper/datatable": "2.*",
+		"hisorange/browser-detect": "1.0.4",
+		"chumper/datatable": "2.0.*",
 		"intervention/image": "^2.3",
-		"phpmailer/phpmailer": "^6.8"
+		"phpmailer/phpmailer": "^6.8",
+		"barryvdh/laravel-snappy": "0.1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -36,7 +40,26 @@
 		]
 	},
 	"config": {
-		"preferred-install": "dist"
+		"platform": {
+			"php": "5.6.40"
+		},
+		"preferred-install": "dist",
+		"allow-plugins": {
+			"kylekatarnls/update-helper": false
+		}
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "path",
+			"url": "packages/hisorange/traits",
+			"options": {
+				"symlink": false
+			}
+		}
+	],
+	"replace": {
+		"hisorange/traits": "*"
+	},
+	"prefer-stable": true
 }
