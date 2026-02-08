@@ -324,3 +324,76 @@ ul li, ol li{
 .tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
     border-left-color: var(--color-gris-oscuro) !important;
 }
+nav {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.nav-pills {
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	height: fit-content;
+}
+.nav-link {
+	font-size: 14px;
+	font-weight: normal !important;
+	text-transform: none !important;
+	min-height: 0px !important;
+}
+.bntContactar {
+	border-color: transparent !important;
+}
+.footer-reveal {
+	background-color: #f2f2f2 !important;
+}
+.footer-content {
+	background-color: #f2f2f2;
+	color: rgb(77, 77, 77) !important;
+	.btnCotizador {
+		color: white !important;
+	}
+	.btnAsesor:hover {
+		color: var(--color-azul);
+		text-decoration: underline !important;
+	}
+	.btnAsesor {
+		color: var(--color-azul) !important;
+		text-decoration: underline;
+	}
+	.custom-primary-font {
+		margin-top: 20px !important;
+		color: rgb(71, 71, 71) !important;
+		font-weight: normal !important;
+	}
+	a {
+		color: rgb(92, 92, 92) !important;
+	}
+	a:hover {
+		color: black !important;
+	}
+}
+.footer-main-content {
+	border-top: 2px solid rgb(87, 87, 87);
+	border-bottom: 2px solid rgb(87, 87, 87);
+}
+.footer-bottom {
+	h5 {
+		color: rgb(77, 77, 77) !important;
+		font-size: 14px !important;
+		font-weight: normal !important;
+	}
+	div {
+		color: rgb(77, 77, 77) !important;
+		font-size: 10px;
+		line-height: 20px;
+	}
+}
+.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+.grayscale:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
