@@ -111,7 +111,7 @@
 								<div class="header-logo">
 										<a href="{{URL::to('/')}}">
 											<!--48 x 108-->
-											<img alt="Seguro de gastos medicos mayores" width="180" height="80" data-sticky-width="82" data-sticky-height="40" src="{{asset('/protectodiez/sgmmPNG/gastosmedicosmayores180.png')}}">
+											<img alt="Seguro de gastos medicos mayores" width="135" height="60" data-sticky-width="82" data-sticky-height="40" src="{{asset('/protectodiez/sgmmPNG/gastosmedicosmayores180.png')}}">
 										</a>
 									</div>
 								</div>
@@ -124,7 +124,7 @@
 												<ul class="nav nav-pills" id="mainNav">
 													<li>
 														<a class="nav-link active" href="{{URL::to('/main')}}">
-															INICIO
+															Inicio
 														</a>
 													</li>
 													<li class="dropdown">
@@ -147,7 +147,7 @@
 														}
 														?>
 														<a class="nav-link dropdown-toggle" href="#">
-															ASEGURADORAS
+															Aseguradoras
 														</a>
 														<ul class="dropdown-menu">
 															@foreach($finalMenu as $menu)
@@ -179,12 +179,12 @@
 													</li>
 													<li>
 														<a class="nav-link" href="{{URL::to('/seguros-maternidad')}}">
-															MATERNIDAD
+															Maternidad
 														</a>
 													</li>
 													<li>
 														<a class="nav-link" href="{{URL::to('/blog-principal')}}">
-															BLOG
+															Blog
 														</a>
 													</li>
 													<li class="dropdown">
@@ -207,7 +207,7 @@
 														}
 														?>
 														<a class="nav-link dropdown-toggle" href="#">
-															PREGUNTAS FRECUENTES
+															Preguntas Frecuentes
 														</a>
 														<ul class="dropdown-menu">
 															@foreach($finalMenu as $menu)
@@ -247,7 +247,7 @@
 														}
 														?>
 														<a class="nav-link" href="{{URL::to('/contacto')}}">
-															CONTACTO
+															Contacto
 														</a>
 														<ul class="dropdown-menu">
 															@foreach($menus as $menu)
@@ -258,7 +258,8 @@
 												</ul>
 											</nav>
 										</div>
-										<a href="{{URL::to('/cotizador')}}" class="btn btn-xl btn-outline btn-rounded btn-primary text-1 ml-3 font-weight-bold text-uppercase btnCotizador">COTIZADOR</a>
+										<a href="{{URL::to('/cotizador')}}" class="btn btn-outline btn-rounded btn-primary text-1 ml-3 btnCotizador bntContactar">Contactar un Asesor</a>
+										<a href="{{URL::to('/cotizador')}}" class="btn btn-rounded btn-primary text-1 ml-3 btnCotizador">Cotiza tu seguro</a>
 										<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
 											<i class="fas fa-bars"></i>
 										</button>
