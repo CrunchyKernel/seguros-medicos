@@ -233,6 +233,13 @@ h6 {
 	}
 }
 
+@media (max-width: 768px) {
+	.logo-img {
+		width: 90px;
+		height: 40px;
+	}
+}
+
 .cotizador-tabla {
 	white-space: nowrap;
 }
@@ -296,13 +303,10 @@ h6 {
 	height: 3px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
 	.btnCotizador {
-		position: absolute;
-		top: 95px;
-		right: 10px;
-		background-color: var(--color-azul) !important;
-		color: #fff !important;
+		font-size: 10px !important;
+		padding: 4px 6px !important;
 	}
 }
 
@@ -350,6 +354,7 @@ ol li {
 	color: rgb(77, 77, 77);
 }
 
+/*
 @media screen and (max-width: 576px) {
 	h2 {
 		margin: 15px 0px;
@@ -369,6 +374,7 @@ ol li {
 		font-weight: bolder;
 	}
 }
+	*/
 
 .tooltip-inner {
 	background-color: var(--color-gris-oscuro) !important;
