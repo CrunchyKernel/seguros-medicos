@@ -9,14 +9,12 @@
 					<article class="">
 						<div class="post-event-content">
 							@if(!isset($hideTitle))
-								<h1 class="custom-primary-font font-weight-semibold text-transform-none text-9 text-center mb-0 mt-0 appear-animation"
-									data-appear-animation="bounceInLeft">{{$contenido->titulo}}</h1>
+								<h1 class="text-transform-none text-9 text-center mb-0 mt-0">{{$contenido->titulo}}</h1>
 							@endif
 							<br>
 							@if(strlen($contenido->imagen_large) > 0)
 								<div class="w-100 text-center pb-5">
-									<img src="{{$contenido->imagen_large}}" class="img-fluid rounded mw-50pct appear-animation"
-										data-appear-animation="zoomIn" data-appear-animation-delay="400">
+									<img src="{{$contenido->imagen_large}}" class="img-fluid mw-50pct blog-image">
 								</div>
 							@endif
 							<?php
@@ -34,7 +32,7 @@
 			$cotizador = View::make('layout.portoCotizadorTest')->render();
 			$contenido->contenido = str_replace('{{$cotizador-test}}', $cotizador, $contenido->contenido);
 		}
-											?>
+															?>
 							{{$contenido->contenido}}
 						</div>
 					</article>
