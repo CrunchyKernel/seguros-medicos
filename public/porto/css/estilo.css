@@ -7,6 +7,7 @@
 	--primary: #1b9dff;
 	--color-gris-claro: #aaaeb0;
 	--color-gris-oscuro: #8c8c8c;
+	--azul-main-title: rgb(65, 146, 173);
 }
 
 .content-media--video {
@@ -313,7 +314,7 @@ h6 {
 h1 {
 	margin: 50px 0px 25px;
 	font-size: 50px;
-	color: rgb(67, 151, 176);
+	color: var(--azul-main-title);
 	font-stretch: normal;
 	line-height: normal;
 	font-weight: bolder;
