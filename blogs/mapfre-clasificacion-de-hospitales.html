@@ -1,330 +1,58 @@
-<style>
-    body {
-        margin-top: 12px;
-        font-family: "Open Sans", Arial, sans-serif;
-    }
-
-    .accordion-toggle {
-        padding: 8px !important;
-    }
-
-    .card-default {
-        border: 0 !important;
-        border-radius: 0 !important;
-        border-bottom: 1px solid #121212 !important;
-    }
-
-    .sub-header {
-        font-size: 14px;
-        color: #429ea9;
-        text-align: center;
-        width: 100%;
-        ;
-        margin-bottom: 40px;
-    }
-
-    .center-text {
-        font-size: 14px;
-        text-align: center;
-        margin: 40px 10%;
-    }
-
-    .article-image {
-        max-width: 100%;
-        display: block;
-        margin: 12px auto;
-    }
-
-    .title {
-        max-width: 80%;
-        color: #429ea9;
-        font-size: 32px;
-        text-align: center;
-        display: block;
-        font-weight: normal;
-        margin: 24px auto;
-    }
-
-    .plans-container {
-        display: flex;
-        gap: 20px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .plan-card {
-        background: linear-gradient(180deg,
-                #f9f9f9 0%,
-                #efefef 100%);
-
-        border-radius: 14px;
-        padding: 20px 22px;
-        width: 23%;
-        min-width: 220px;
-        box-sizing: border-box;
-    }
-
-    .plan-title {
-        color: #00a6b6;
-        font-weight: bold;
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
-
-    .plan-text {
-        font-size: 12px;
-        color: #555;
-        line-height: 1.4;
-    }
-
-    @media (max-width: 900px) {
-        .plan-card {
-            width: 48%;
-        }
-    }
-
-    @media (max-width: 500px) {
-        .plan-card {
-            width: 100%;
-        }
-    }
-
-    table {
-        border-collapse: separate !important;
-        border-spacing: 0;
-        width: 100% !important;
-        font-family: Arial, Helvetica, sans-serif !important;
-        font-size: 13px;
-        border-radius: 14px;
-        overflow: hidden;
-    }
-
-    /* HEADER */
-    table tr:first-child td {
-        background: #008fa1 !important;
-        color: #ffffff !important;
-        font-weight: 600 !important;
-        text-align: left !important;
-        padding: 12px 14px !important;
-        border: none !important;
-    }
-
-    /* HEADER CELL BORDERS */
-    table tr:first-child td:first-child {
-        border-top-left-radius: 14px;
-    }
-
-    table tr:first-child td:last-child {
-        border-top-right-radius: 14px;
-    }
-
-    /* BODY CELLS */
-    table tr:not(:first-child) td {
-        background: #ffffff !important;
-        color: #007c92 !important;
-        padding: 10px 14px !important;
-        border-bottom: 1px solid #cfdfe3 !important;
-        border-right: 1px solid #cfdfe3 !important;
-        vertical-align: middle !important;
-    }
-
-    /* REMOVE RIGHT BORDER LAST COLUMN */
-    table tr td:last-child {
-        border-right: none !important;
-    }
-
-    /* ZEBRA STRIPES */
-    table tr:not(:first-child):nth-child(even) td {
-        background: #dff3f6 !important;
-    }
-
-    /* CENTER SHORT COLUMNS */
-    table tr td:nth-child(4),
-    table tr td:nth-child(5) {
-        text-align: center !important;
-        font-weight: 600;
-    }
-
-    /* BOTTOM ROUNDED CORNERS */
-    table tr:last-child td:first-child {
-        border-bottom-left-radius: 14px;
-    }
-
-    table tr:last-child td:last-child {
-        border-bottom-right-radius: 14px;
-    }
-
-    .mapfre-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 32px;
-        margin: 32px 0 8px 0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    /* LEFT */
-    .mapfre-title {
-        color: #00a6b6;
-    }
-
-    .mapfre-title .line-1 {
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-
-
-    /* RIGHT */
-    .mapfre-info {
-        max-width: 420px;
-        font-size: 11px;
-        color: #666;
-        line-height: 1.4;
-    }
-
-    .mapfre-info p {
-        margin: 0 0 6px 0;
-    }
-
-    .mapfre-link {
-        color: #00a6b6;
-        font-size: 11px;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .mapfre-link:hover {
-        text-decoration: underline;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-        .mapfre-header {
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .mapfre-info {
-            max-width: 100%;
-        }
-    }
-
-    .info-text {
-        max-width: 60%;
-        font-size: 12px;
-        text-align: center;
-        margin: 20px 15%;
-    }
-
-    a.btn-primary,
-    a.btn-outline {
-        display: inline-block;
-        padding: 8px 18px;
-        border-radius: 999px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.2s ease;
-    }
-
-    /* FILLED BUTTON */
-    a.btn-primary {
-        background-color: #008fa1;
-        color: #ffffff;
-    }
-
-    /* OUTLINED BUTTON */
-    a.btn-outline {
-        background-color: #ffffff;
-        color: #008fa1;
-        border: 1px solid #008fa1;
-    }
-
-    /* HOVER STATES */
-    a.btn-primary:hover {
-        background-color: #007c8c;
-    }
-
-    a.btn-outline:hover {
-        background-color: #e6f6f8;
-    }
-
-    /* OPTIONAL FOCUS (ACCESSIBILITY) */
-    a.btn-primary:focus,
-    a.btn-outline:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(0, 143, 161, 0.3);
-    }
-</style>
-
-<div class="sub-header">
-    Entiende qué hospitales cubre tu seguro
+<div class="w-100">
+    <h2 class="mw-50 mx-auto" style="text-align: center;">Niveles Hospitalarios en Protecci&oacute;n M&eacute;dica -
+        MAPFRE</h2>
 </div>
-
-<div class="center-text">
-    MAPFRE clasifica los hospitales por nivel. Esta clasificación impacta directamente
-    en tu cobertura, deducible y coaseguro. Aquí te lo explicamos claro.
-</div>
-
-<img class="article-image" src="https://es.huapingmetal.com/wp-content/uploads/2022/06/contact-banner-3.webp">
-
-<h2 class="title">Niveles Hospitalarios en Protecci&oacute;n M&eacute;dica - MAPFRE</h2>
-<div class="plans-container">
-
-    <div class="plan-card">
-        <div class="plan-title">Plan Esencial</div>
-        <div class="plan-text">
-            Acceso a hospitales de nivel Esencial
-        </div>
-    </div>
-
-    <div class="plan-card">
-        <div class="plan-title">Plan Óptimo</div>
-        <div class="plan-text">
-            Acceso a hospitales Esencial y Óptimo<br><br>
-            Elimina coaseguro en hospitales de nivel Esencial
-        </div>
-    </div>
-
-    <div class="plan-card">
-        <div class="plan-title">Plan Completo</div>
-        <div class="plan-text">
-            Acceso a hospitales Esencial, Óptimo y Completo<br><br>
-            Elimina coaseguro en hospitales de nivel Óptimo y Esencial
-        </div>
-    </div>
-
-    <div class="plan-card">
-        <div class="plan-title">Plan Amplio</div>
-        <div class="plan-text">
-            Acceso a hospitales Esencial, Óptimo, Completo y Amplio<br><br>
-            Elimina coaseguro en hospitales de nivel Completo, Óptimo y Esencial
-        </div>
-    </div>
-
-</div>
-
 
 <div>
+    <div class="nr-cards-container">
 
-    <div class="mapfre-header">
-        <div class="mapfre-title">
-            <div class="line-1">Hospitales MAPFRE</div>
-            <div class="line-1">Clasificados por Estados</div>
+        <div class="nr-card">
+            <h2>Plan Esencial</h2>
+            <p>Acceso a hospitales de nivel Esencial</p>
         </div>
 
-        <div class="mapfre-info">
-            <p>
-                Los niveles hospitalarios y convenios están sujetos a cambios.
-                Para información oficial y vigente, consulta directamente la Red Médica
-                de MAPFRE del producto Protección Médica a tu Medida.
-            </p>
-            <a href="#" class="mapfre-link">MAPFRE &gt;</a>
+        <div class="nr-card">
+            <h2>Plan Óptimo</h2>
+            <p>Acceso a hospitales Esencial y Óptimo</p>
+            <p>Elimina coaseguro en hospitales de nivel Esencial</p>
+        </div>
+
+        <div class="nr-card">
+            <h2>Plan Completo</h2>
+            <p>Acceso a hospitales Esencial, Óptimo y Completo</p>
+            <p>Elimina coaseguro en hospitales de nivel Óptimo y Esencial</p>
+        </div>
+
+        <div class="nr-card">
+            <h2>Plan Amplio</h2>
+            <p>Acceso a hospitales Esencial, Óptimo, Completo y Amplio</p>
+            <p>Elimina coaseguro en hospitales de nivel Completo, Óptimo y Esencial</p>
+        </div>
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mx-0">Hospitales MAPFRE Clasificados por Estados</h2>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Los niveles hospitalarios y convenios están sujetos a cambios.
+                    Para información oficial y vigente, consulta directamente la Red Médica
+                    de MAPFRE del producto Protección Médica a tu Medida.
+                </p>
+                <p>
+                    <a href="https://www.mapfre.com.mx">MAPFRE ></a>
+                </p>
+            </div>
         </div>
     </div>
-
     <!--acordeon de hospitales-->
 
     <div class="accordion accordion-lg" id="accordion5">
@@ -8931,103 +8659,70 @@
             </div>
         </div>
     </div>
-
-    <p>&nbsp;</p>
-
-
-    <h2 class="title">Zonas de Cobertura MAPFRE</h2>
-
-    <div class="center-text">
-        MAPFRE divide el país en 7 zonas de cobertura, definidas por el costo promedio
-        de atención médica en cada región.
-    </div>
-
-    <div class="info-text">
-        Tu póliza cubre:
-
-        La zona correspondiente a tu estado, y cualquier zona
-        de menor costo (zonas inferiores).
-    </div>
-
-    <div class="plans-container" style="justify-content: center;">
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 1</div>
-            <div class="plan-text">
-                Ciudad de México y Zona Conurbada
-            </div>
-        </div>
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 2</div>
-            <div class="plan-text">
-                Nuevo León y Jalisco.
-
-            </div>
-        </div>
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 3</div>
-            <div class="plan-text">
-                Estado de México (Excepto
-                Zona Conurbada).
-            </div>
-        </div>
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 4</div>
-            <div class="plan-text"> Hidalgo, Querétaro, Morelos y Guerrero.
-            </div>
-        </div>
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 5</div>
-            <div class="plan-text">Coahuila, Durango, Guanajuato,
-                Michoacán, Nayarit y
-                Tamaulipas.
-            </div>
-        </div>
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 6</div>
-            <div class="plan-text"> Aguascalientes, Baja California
-                Norte, Baja California Sur,
-                Colima, Puebla, San Luis Potosí
-                y Sonora.
-            </div>
-        </div>
-
-        <div class="plan-card">
-            <div class="plan-title">Zona 7</div>
-            <div class="plan-text"> Campeche, Chiapas,
-                Chihuahua, Oaxaca, Quintana
-                Roo, Sinaloa, Tabasco, Tlaxcala,
-                Veracruz, Yucatán y Zacatecas.
-            </div>
-        </div>
-
+    <br>
+    <br>
+    <br>
+    <div class="w-100">
+        <h2 class="text-center">Zonas de Cobertura MAPFRE</h2>
+        <h3 class="w-75 mx-auto text-center text-dark font-weight-light">
+            MAPFRE divide el país en 7 zonas de cobertura, definidas por el costo promedio
+            de atención médica en cada región.
+        </h3>
+        <p class="w-50 mx-auto text-center ">
+            Tu póliza cubre:
+            La zona correspondiente a tu estado, y cualquier zona
+            de menor costo ( zonas inferiores )
+        </p>
 
     </div>
+    <br>
+    <br>
 
-</div>
-<div class="center-text" style="font-size: 12px;">
-    Si deseas contar con cobertura en toda la República Mexicana, puedes contratar la cobertura adicional Atención
-    Nacional Total, que te
-    permite atenderte en cualquier zona del país sin restricciones.
-</div>
+    <div class="nr-cards-container">
 
-<div class="center-text">
-    <a href="/cotizador" class="btn-primary">Cotiza tu seguro</a>
-    <a href="/cotizador" class="btn-outline">Contactar un Asesor</a>
-</div>
+        <div class="nr-card">
+            <h2>Zona 1</h2>
+            <p> Cd. de M&eacute;xico y Zona Conurbada.</p>
+        </div>
 
-<div class="title" style="margin-top: 40px;">
-    Guías Claras y
-    Consejos Expertos
-</div>
+        <div class="nr-card">
+            <h2>Zona 2</h2>
+            <p>Nuevo Le&oacute;n y Jalisco.</p>
+        </div>
 
-<div class="info-text">
-    Aprende a manejar deducibles, coaseguros y coberturas con
-    nuestros artículos actualizados. Te ofrecemos el conocimiento
-    que necesitas para proteger a tu familia y tu patrimonio.
+        <div class="nr-card">
+            <h2>Zona 3</h2>
+            <p>Estado de M&eacute;xico (Excepto Zona Conurbada).</p>
+        </div>
+
+        <div class="nr-card">
+            <h2>Zona 4</h2>
+            <p>Hidalgo, Quer&eacute;taro, Morelos y Guerrero.</p>
+        </div>
+
+        <div class="nr-card">
+            <h2>Zona 5</h2>
+            <p>Coahuila, Durango, Guanajuato, Michoac&aacute;n, Nayarit y Tamaulipas.</p>
+        </div>
+
+        <div class="nr-card">
+            <h2>Zona 6</h2>
+            <p>Aguascalientes, Baja California Norte, Baja California Sur, Colima, Puebla, San
+                Luis Potos&iacute; y Sonora.</p>
+        </div>
+
+        <div class="nr-card">
+            <h2>Zona 7</h2>
+            <p>Campeche, Chiapas, Chihuahua, Oaxaca, Quintana Roo, Sinaloa, Tabasco, Tlaxcala,
+                Veracruz, Yucat&aacute;n y Zacatecas.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p class="w-75 mx-auto text-center ">
+        Si deseas contar con cobertura en toda la República Mexicana, puedes contratar la cobertura adicional Atención
+        Nacional Total, que te
+        permite atenderte en cualquier zona del país sin restricciones.
+    </p>
+</div>
 </div>
