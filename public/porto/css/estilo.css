@@ -10,6 +10,71 @@
 	--azul-main-title: rgb(65, 146, 173);
 }
 
+/* Custom carrousel classes */
+.cc-custom-card {
+	border-radius: 20px;
+	overflow: hidden;
+	background: rgb(240, 240, 240);
+}
+
+.cc-custom-card img {
+	height: 220px;
+	object-fit: cover;
+}
+
+.cc-custom-card-title {
+	font-size: 1rem;
+	font-weight: 400;
+	color: black;
+	margin-bottom: 0.5rem;
+}
+
+.cc-custom-card-text {
+	font-size: 0.8rem;
+	color: #333;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.cc-carousel .carousel-control-prev,
+.cc-carousel .carousel-control-next {
+	display: none;
+}
+
+.cc-controls {
+	font-size: 22px;
+}
+
+.cc-control-btn {
+	color: #17a2b8;
+	text-decoration: none;
+	transition: 0.3s ease;
+	font-weight: bold;
+}
+
+.cc-control-btn:hover {
+	color: #138496;
+	text-decoration: none;
+}
+
+.cc-custom-card-body {
+	padding: 20px 20px 0px 20px;
+	border-radius: 20px 20px 0 0;
+	position: relative;
+	top: -20px;
+	background: rgb(240, 240, 240);
+}
+
+.cc-col {
+	padding: 0 15px 30px 15px;
+}
+
+.carousel-item {
+	padding: 0px 10px;
+}
+
+
+
 .nr-cards-container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -402,7 +467,7 @@ p {
 	text-justify: auto;
 	text-align: justify;
 	margin-bottom: 25px;
-	line-height: 1.8;
+	line-height: 1.4;
 	color: rgb(77, 77, 77);
 }
 
@@ -549,4 +614,20 @@ nav {
 .grayscale:hover {
 	filter: grayscale(0%);
 	opacity: 1;
+}
+
+.cc-container {
+	max-width: 100%;
+}
+
+.cc-carousel-title {
+	width: 30%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.cc-carousel-subtitle {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
 }
