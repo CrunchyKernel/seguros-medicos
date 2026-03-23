@@ -139,12 +139,10 @@
 
 .blog-image {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	height: auto;
 }
 
 .mw-50pct {
-	max-height: 300px;
 	width: 100%;
 	border-radius: 25px;
 	overflow: hidden;
@@ -467,17 +465,19 @@ p {
 	text-justify: auto;
 	text-align: justify;
 	margin-bottom: 25px;
-	line-height: 1.4;
-	color: rgb(77, 77, 77);
+	line-height: 1.2;
+	font-size: 16px;
+	color: black;
 }
 
 ul li,
 ol li {
 	text-justify: auto;
 	text-align: justify;
-	margin-bottom: 10px;
-	line-height: 1.8;
-	color: rgb(77, 77, 77);
+	margin-bottom: 2px;
+	line-height: 1.2;
+	color: black;
+	font-size: 16px;
 }
 
 /*
