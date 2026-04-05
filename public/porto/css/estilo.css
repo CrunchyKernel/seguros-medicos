@@ -474,33 +474,11 @@ ul li,
 ol li {
 	text-justify: auto;
 	text-align: justify;
-	margin-bottom: 2px;
-	line-height: 1.2;
+	line-height: 1.4;
 	color: black;
 	font-size: 16px;
+	margin-bottom: 14px;
 }
-
-/*
-@media screen and (max-width: 576px) {
-	h2 {
-		margin: 15px 0px;
-		font-size: 30px;
-		color: rgb(67, 151, 176);
-		font-stretch: normal;
-		line-height: normal;
-		font-weight: bolder;
-	}
-
-	h3 {
-		margin: 5px 0px 0px;
-		font-size: 25px;
-		color: rgb(67, 151, 176);
-		font-stretch: normal;
-		line-height: normal;
-		font-weight: bolder;
-	}
-}
-	*/
 
 .tooltip-inner {
 	background-color: var(--color-gris-oscuro) !important;
@@ -539,7 +517,6 @@ nav {
 }
 
 .nav-link {
-	font-size: 14px;
 	font-weight: normal !important;
 	text-transform: none !important;
 	min-height: 0px !important;
