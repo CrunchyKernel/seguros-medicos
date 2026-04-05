@@ -95,13 +95,24 @@
 	min-height: 250px;
 }
 
-.nr-card h2 {
-	margin: 0;
+.nr-card h2,
+.nr-card h4 {
+	margin: 5px 0;
 }
 
 .nr-card p {
 	text-align: left;
 	line-height: normal;
+}
+
+.nr-card li {
+	font-size: 12px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+.nr-card ul {
+	padding-left: 10px;
 }
 
 .content-media--video {
