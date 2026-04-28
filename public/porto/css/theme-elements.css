@@ -56,13 +56,6 @@ table tr:not(:first-child):nth-child(even) td {
 	background: #dff3f6 !important;
 }
 
-/* CENTER SHORT COLUMNS */
-table tr td:nth-child(4),
-table tr td:nth-child(5) {
-	text-align: center !important;
-	font-weight: 600;
-}
-
 /* BOTTOM ROUNDED CORNERS */
 table tr:last-child td:first-child {
 	border-bottom-left-radius: 14px;
