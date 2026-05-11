@@ -73,8 +73,6 @@
 	padding: 0px 10px;
 }
 
-
-
 .nr-cards-container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -93,6 +91,10 @@
 	flex-direction: column;
 	justify-content: space-between;
 	min-height: 250px;
+}
+
+.nr-card-wide {
+	width: 300px;
 }
 
 .nr-card h2,
