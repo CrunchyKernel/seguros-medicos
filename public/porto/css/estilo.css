@@ -117,6 +117,11 @@
 	padding-left: 10px;
 }
 
+.nr-form-control {
+	border-radius: 10px;
+	border: 1px solid #D9D9D9;
+}
+
 .content-media--video {
 	background-color: #ddd;
 	display: block;
