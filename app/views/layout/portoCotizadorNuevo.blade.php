@@ -1,5 +1,5 @@
 <section id="cotizador" class="section-padding">
-	<div class="container" style="max-width: 75%;">
+	<div class="container">
 		<div class="row">
 			<form action="" class="contact2-form validate-form" id="frmCotizador" novalidate>
 				<input type="hidden" name="total" id="total" value="">
@@ -7,20 +7,20 @@
 				<input type="hidden" name="_estado" id="_estado" value="">
 				<input type="hidden" name="_ciudad" id="_ciudad" value="">
 				<input type="hidden" name="_url" id="_url" value="">
-				<div class="col" style="border: 1px solid #D9D9D9; border-radius: 20px; padding: 15px">
-					<div class="form-group column">
-						<h4 class="text-6 col-md-12" style="margin: 10px 0px 0px 0px">Mis datos personales</h4>
+				<div class="col">
+					<div class="form-group row">
+						<h3 class="text-6">Mis datos personales</h3>
 					</div>
-					<div class="form-group column">
-						<label for="nombre" class="col-md-12 col-form-label">Nombre Completo</label>
-						<div class="col-md-12">
-							<input type="text" name="nombre" id="nombre" class="form-control nr-form-control" required>
+					<div class="form-group row">
+						<label for="nombre" class="col-md-2 col-form-label">Nombre</label>
+						<div class="col-md-10">
+							<input type="text" name="nombre" id="nombre" class="form-control" required>
 						</div>
 					</div>
-					<div class="form-group column">
-						<label for="estado" class="col-md-12 col-form-label">Estado</label>
-						<div class="col-md-12">
-							<select class="form-control nr-form-control" name="estado" id="estado" required>
+					<div class="form-group row">
+						<label for="estado" class="col-md-2 col-form-label">Estado</label>
+						<div class="col-md-10">
+							<select class="form-control" name="estado" id="estado" required>
 								<option value=""></option>
 								<option value="1">AGUASCALIENTES</option>
 								<option value="2">BAJA CALIFORNIA</option>
@@ -57,17 +57,17 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group column">
-						<label for="ciudad" class="col-md-12 col-form-label">Ciudad</label>
-						<div class="col-md-12">
-							<select class="form-control nr-form-control" name="ciudad" id="ciudad" required>
+					<div class="form-group row">
+						<label for="ciudad" class="col-md-2 col-form-label">Ciudad</label>
+						<div class="col-md-10">
+							<select class="form-control" name="ciudad" id="ciudad" required>
 							</select>
 						</div>
 					</div>
-					<div class="form-group column d-none" id="d-cotizar">
-						<label for="cotizar" class="col-md-12 col-form-label">Quiero un seguro para</label>
-						<div class="col-md-12">
-							<select class="form-control nr-form-control" name="cotizar" id="cotizar" required>
+					<div class="form-group row d-none" id="d-cotizar">
+						<label for="cotizar" class="col-md-2 col-form-label">Quiero un seguro para</label>
+						<div class="col-md-10">
+							<select class="form-control" name="cotizar" id="cotizar" required>
 								<option value=""></option>
 								<option value="1">1 persona</option>
 								<option value="2">Mi pareja y yo</option>
@@ -80,32 +80,31 @@
 					</div>
 					<div class="form-inline row mb-3 d-none" id="d-sexo">
 						<label for="sexo" class="sexo pl-3">Soy&nbsp;</label>
-						<select class="form-control nr-form-control sexo" name="sexo" id="sexo">
+						<select class="form-control sexo" name="sexo" id="sexo">
 							<option value=""></option>
 							<option value="H">Hombre</option>
 							<option value="M">Mujer</option>
 						</select>
 						<label for="edad" class="sexo">&nbsp;y tengo&nbsp;</label>
-						<input type="text" name="edad" id="edad"
-							class="form-control nr-form-control cotizador-nuevo sexo" min="18" max="70">
+						<input type="text" name="edad" id="edad" class="form-control cotizador-nuevo sexo" min="18"
+							max="70">
 						<label for="" class="sexo">&nbsp;años.</label>
 
 						<label for="sexo-2" class="d-none sexo-conyuge" id="lblConyuge">&nbsp;Mi cónyuge
 							es&nbsp;</label>
-						<select class="form-control nr-form-control d-none sexo-conyuge" name="sexo-2" id="sexo-2">
+						<select class="form-control d-none sexo-conyuge" name="sexo-2" id="sexo-2">
 							<option value=""></option>
 							<option value="H">Hombre</option>
 							<option value="M">Mujer</option>
 						</select>
 						<label for="edad-2" class="d-none sexo-conyuge">&nbsp;y tiene&nbsp;</label>
 						<input type="text" name="edad-2" id="edad-2"
-							class="form-control nr-form-control cotizador-nuevo d-none sexo-conyuge" max="70">
+							class="form-control cotizador-nuevo d-none sexo-conyuge" max="70">
 						<label for="edad-2" class="d-none sexo-conyuge">&nbsp;años.</label>
 					</div>
 					<div class="form-inline row mb-3 d-none hijos">
 						<label for="hijos" class="d-none hijos pl-3">Tengo&nbsp;</label>
-						<input type="text" name="hijos" id="hijos"
-							class="form-control nr-form-control cotizador-nuevo d-none hijos">
+						<input type="text" name="hijos" id="hijos" class="form-control cotizador-nuevo d-none hijos">
 						<label for="" class="d-none hijos">&nbsp;hijo(s), </label>
 
 						<div id="hijos-container" class="form-inline"></div>
@@ -127,19 +126,19 @@
 						</select>
 						<label for="" class="d-none edades-hijos">&nbsp;respectivamente</label!-->
 					</div>
-					<div class="form-group column d-none d-opciones">
-						<h4 class="text-6 col-md-12" style="margin: 10px 0px 0px 0px">Sobre mi seguro</h4>
+					<div class="form-group row d-none d-opciones">
+						<h3 class="text-6">Sobre mi seguro</h3>
 					</div>
-					<div class="form-group column d-none d-opciones">
-						<div class="col-md-12 offset-2">
+					<div class="form-group row d-none d-opciones">
+						<div class="col-md-10 offset-2">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="poliza" name="poliza">
 								<label class="form-check-label" for="poliza">Tengo póliza actualmente</label>
 							</div>
 						</div>
 					</div>
-					<div class="form-group column d-none d-opciones">
-						<div class="col-md-12 offset-2">
+					<div class="form-group row d-none d-opciones">
+						<div class="col-md-10 offset-2">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="maternidad" name="maternidad">
 								<label class="form-check-label" for="maternidad">Me interesa cobertura en
@@ -147,27 +146,26 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group column d-none d-opciones">
-						<div class="col-md-12 offset-2">
+					<div class="form-group row d-none d-opciones">
+						<div class="col-md-10 offset-2">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="emergencia_extranjero"
 									name="emergencia_extranjero" checked>
-								<label class="form-check-label" for="emergencia_extranjero">A veces viajo al
-									extranjero
+								<label class="form-check-label" for="emergencia_extranjero">A veces viajo al extranjero
 									y necesito cobertura</label>
 							</div>
 						</div>
 					</div>
-					<div class="form-group column d-none d-opciones">
-						<div class="col-md-12 offset-2">
+					<div class="form-group row d-none d-opciones">
+						<div class="col-md-10 offset-2">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="dental" name="dental" checked>
 								<label class="form-check-label" for="dental">Deseo cobertura Dental Básica</label>
 							</div>
 						</div>
 					</div>
-					<div class="form-group column d-none d-opciones">
-						<div class="col-md-12 offset-2">
+					<div class="form-group row d-none d-opciones">
+						<div class="col-md-10 offset-2">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="multiregion" name="multiregion">
 								<label class="form-check-label" for="multiregion">Quisiera cobertura en Estados de
@@ -176,39 +174,36 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group column d-none d-contacto">
-						<h4 class="text-6 col-md-12" style="margin: 10px 0px 0px 0px">Por último, mis datos de contacto
-						</h4>
+					<div class="form-group row d-none d-contacto">
+						<h3 class="text-6">Por último, mis datos de contacto</h3>
 					</div>
-					<div class="form-group column d-none d-contacto">
-						<label for="email" class="col-md-12 col-form-label">Email</label>
-						<div class="col-md-12">
-							<input type="email" name="email" id="email" class="form-control nr-form-control" required>
+					<div class="form-group row d-none d-contacto">
+						<label for="email" class="col-md-2 col-form-label">Email</label>
+						<div class="col-md-10">
+							<input type="email" name="email" id="email" class="form-control" required>
 						</div>
 					</div>
-					<div class="form-group column d-none d-contacto">
-						<label for="telefono" class="col-md-12 col-form-label">Teléfono</label>
-						<div class="col-md-12">
-							<input type="text" name="telefono" id="telefono" class="form-control nr-form-control"
+					<div class="form-group row d-none d-contacto">
+						<label for="telefono" class="col-md-2 col-form-label">Teléfono</label>
+						<div class="col-md-10">
+							<input type="text" name="telefono" id="telefono" class="form-control"
 								pattern="^[0-9]{2}-[0-9]{4}-[0-9]{4}$" minlength="12" maxlength="12"
 								title="XX-XXXX-XXXX" required>
 						</div>
 					</div>
-					<div class="form-group column d-none d-contacto">
-						<label for="observaciones" class="col-md-12 col-form-label">Observaciones</label>
-						<div class="col-md-12">
-							<textarea name="observaciones" id="observaciones"
-								class="form-control nr-form-control"></textarea>
+					<div class="form-group row d-none d-contacto">
+						<label for="observaciones" class="col-md-2 col-form-label">Observaciones</label>
+						<div class="col-md-10">
+							<textarea name="observaciones" id="observaciones" class="form-control"></textarea>
 						</div>
 					</div>
-					<div class="form-group column d-none d-contacto">
-						<div class="col-md-12 offset-md-2">
-							<label class="font-weight-bold">Te contactaremos solamente en caso de ser
-								necesario.</label>
+					<div class="form-group row d-none d-contacto">
+						<div class="col-md-10 offset-md-2">
+							<label class="font-weight-bold">Te contactaremos solamente en caso de ser necesario.</label>
 						</div>
 					</div>
-					<div class="form-group column d-none d-contacto">
-						<div class="col-md-12 offset-md-2">
+					<div class="form-group row d-none d-contacto">
+						<div class="col-md-10 offset-md-2">
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="privacidad" name="privacidad"
 									title="Es necesario Aceptar términos, condiciones y aviso de privacidad" required>
@@ -217,7 +212,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group column d-none d-contacto">
+					<div class="form-group row d-none d-contacto">
 						<div class="col text-center">
 							<button type="submit"
 								class="btn btn-outline btn-primary font-weight-bold custom-btn-style-1 text-2"
@@ -241,11 +236,9 @@
 										<li><b>Grupo 4</b>: Hidalgo, Querétaro, Morelos y Guerrero</li>
 										<li><b>Grupo 5</b>: Coahuia, Durango, Guanajuato, Michoacán, Nayarit y
 											Tamaulipas</li>
-										<li><b>Grupo 6</b>: Aguscalientes, Baja California Norte, Baja California
-											Sur,
+										<li><b>Grupo 6</b>: Aguscalientes, Baja California Norte, Baja California Sur,
 											Colima, Puebla, San Luis Potosí y Sonora</li>
-										<li><b>Grupo 7</b>: Campeche, Chiapas, Chihuahua, Oaxaca, Quintana Roo,
-											Sinaloa,
+										<li><b>Grupo 7</b>: Campeche, Chiapas, Chihuahua, Oaxaca, Quintana Roo, Sinaloa,
 											Tabasco, Tlaxcala, Veracruz, Yucatán y Zacatecas</li>
 									</ul>
 								</div>

@@ -1,3 +1,11 @@
+<style>
+    /* Extra breathing room between top-level sections */
+    .container.mb-5,
+    .card.mb-5,
+    div.mb-5.pt-4 {
+        margin-bottom: 5rem !important;
+    }
+</style>
 <!-- HERO -->
 <div class="card shadow-sm mb-5"
     style="border-radius: 25px; border: none; background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #B4E0E8 100%);">
@@ -16,32 +24,53 @@
     </div>
     <!-- LOGOS ASEGURADORAS -->
 
-    <div class="px-4" style="position: relative; top: 40px;">
-        <div class="d-flex flex-wrap align-items-center justify-content-around p-3"
-            style="background-color: #fff; border-radius: 40px;">
-            <div class="px-2 py-2"><img alt="Mapfre" src="/images_post/images/home_seg_mapfre.png"
-                    style="max-height: 14px; width: auto;" /></div>
+    <style>
+        .logos-carousel {
+            background-color: #fff;
+            border-radius: 40px;
+            overflow: hidden;
+            padding: 0;
+        }
+        .logos-track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            height: 85px;
+            animation: logos-scroll-right 40s linear infinite;
+        }
+        .logos-track .logo-item {
+            flex-shrink: 0;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes logos-scroll-right {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(0); }
+        }
+    </style>
 
-            <div class="px-2 py-2"><img alt="MetLife" src="/images_post/images/home_seg_metlife.png"
-                    style="max-height: 18px; width: auto;" /></div>
-
-            <div class="px-2 py-2"><img alt="General de Salud" src="/images_post/images/home_seg_general.png"
-                    style="max-height: 25px; width: auto;" /></div>
-
-            <div class="px-2 py-2"><img alt="Allianz" src="/images_post/images/home_seg_allianz.png"
-                    style="max-height: 25px; width: auto;" /></div>
-
-            <div class="px-2 py-2"><img alt="AXA" src="/images_post/images/home_seg_axa.png"
-                    style="max-height: 25px; width: auto;" /></div>
-
-            <div class="px-2 py-2"><img alt="Banorte" src="/images_post/images/home_seg_banorte.png"
-                    style="max-height: 25px; width: auto;" /></div>
-
-            <div class="px-2 py-2"><img alt="Inbursa" src="/images_post/images/home_seg_inbursa.png"
-                    style="max-height: 25px; width: auto;" /></div>
-
-            <div class="px-2 py-2"><img alt="Seguros Monterrey" src="/images_post/images/home_seg_mty.png"
-                    style="max-height: 25px ; width: auto;" /></div>
+    <div class="px-4" style="position: relative; top: 30px;">
+        <div class="logos-carousel">
+            <div class="logos-track">
+                <div class="logo-item"><img alt="Mapfre" src="/images_post/images/logos/1.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item"><img alt="MetLife" src="/images_post/images/logos/2.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item"><img alt="General de Salud" src="/images_post/images/logos/3.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item"><img alt="Allianz" src="/images_post/images/logos/4.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item"><img alt="AXA" src="/images_post/images/logos/5.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item"><img alt="Banorte" src="/images_post/images/logos/6.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item"><img alt="Inbursa" src="/images_post/images/logos/7.jpeg" style="max-height: 25px; width: auto;" /></div>
+                <div class="logo-item"><img alt="Seguros Monterrey" src="/images_post/images/logos/8.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/1.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/2.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/3.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/4.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/5.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/6.png" style="max-height: 85px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/7.jpeg" style="max-height: 25px; width: auto;" /></div>
+                <div class="logo-item" aria-hidden="true"><img alt="" src="/images_post/images/logos/8.png" style="max-height: 85px; width: auto;" /></div>
+            </div>
         </div>
     </div>
 </div>
@@ -188,66 +217,401 @@
 </div>
 <!-- TESTIMONIOS -->
 
-<div class="container mb-5 pt-4">
-    <div class="text-center">
-        <h2 class="d-inline-block px-4 py-2 mb-3" style="background-color: #f5f5f5; border-radius: 50px;">Testimonios de
-            Clientes</h2>
+<style>
+    .testimonios-carousel {
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+    .testimonios-track {
+        display: flex;
+        align-items: stretch;
+        width: max-content;
+        animation: testimonios-scroll-right 120s linear infinite;
+    }
+    .testimonios-track .testimonio-item {
+        flex-shrink: 0;
+        width: 360px;
+        padding: 0 0.75rem;
+        display: flex;
+    }
+    .testimonios-track .testimonio-item .card {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    @keyframes testimonios-scroll-right {
+        from { transform: translateX(-50%); }
+        to { transform: translateX(0); }
+    }
+</style>
+
+<div class="mb-5 pt-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="d-inline-block px-4 py-2 mb-3" style="background-color: #f5f5f5; border-radius: 50px;">
+                Testimonios de Clientes</h2>
+        </div>
+
+        <p class="text-center">Historias reales de personas que encontraron la protecci&oacute;n que necesitaban.</p>
     </div>
 
-    <p class="text-center">Historias reales de personas que encontraron la protecci&oacute;n que necesitaban.</p>
-
-    <div class="row mt-5">
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm p-4 h-100" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
-                <div class="d-flex align-items-center mb-3"><img alt="Mar&iacute;a G." class="rounded-circle mr-3"
-                        src="/images_post/testimonios/maria-g.png"
-                        style="width: 50px; height: 50px; object-fit: cover;" />
-                    <div>
-                        <strong>Mar&iacute;a G.</strong><br />
-                        <small>Guadalajara, Jal.</small>
+    <div class="testimonios-carousel">
+        <div class="testimonios-track">
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Andrea L&oacute;pez" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/1.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Andrea L&oacute;pez</strong><br />
+                            <small>Arquitecta</small>
+                        </div>
                     </div>
+
+                    <p class="mb-0" style="text-align: left;">Llevaba semanas intentando entender diferencias
+                        entre aseguradoras y deducibles, pero en esta p&aacute;gina pude comparar todo de forma muy
+                        clara. Lo que m&aacute;s me gust&oacute; fue que no intentaron venderme lo m&aacute;s
+                        caro, sino el que realmente me conven&iacute;a.</p>
                 </div>
-
-                <h5 class="font-weight-bold">Excelente atenci&oacute;n</h5>
-
-                <p>&ldquo;Excelente acompa&ntilde;amiento: en 24 horas tuve opciones claras y la mejor tarifa para mi
-                    familia.&rdquo;</p>
             </div>
-        </div>
 
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm p-4 h-100" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
-                <div class="d-flex align-items-center mb-3"><img alt="Mar&iacute;a G." class="rounded-circle mr-3"
-                        src="/images_post/testimonios/maria-g.png"
-                        style="width: 50px; height: 50px; object-fit: cover;" />
-                    <div>
-                        <strong>Mar&iacute;a G.</strong><br />
-                        <small>Guadalajara, Jal.</small>
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Carlos M&eacute;ndez" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/2.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Carlos M&eacute;ndez</strong><br />
+                            <small>Ingeniero Industrial</small>
+                        </div>
                     </div>
+
+                    <p class="mb-0" style="text-align: left;">La experiencia fue much&iacute;simo m&aacute;s
+                        sencilla de lo que imaginaba. Pude cotizar varias alternativas y despu&eacute;s recib&iacute;
+                        una asesor&iacute;a muy personalizada. Me explicaron mis dudas y se adaptaron a mi
+                        presupuesto.</p>
                 </div>
-
-                <h5 class="font-weight-bold">Excelente atenci&oacute;n</h5>
-
-                <p>&ldquo;Excelente acompa&ntilde;amiento: en 24 horas tuve opciones claras y la mejor tarifa para mi
-                    familia.&rdquo;</p>
             </div>
-        </div>
 
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm p-4 h-100" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
-                <div class="d-flex align-items-center mb-3"><img alt="Mar&iacute;a G." class="rounded-circle mr-3"
-                        src="/images_post/testimonios/maria-g.png"
-                        style="width: 50px; height: 50px; object-fit: cover;" />
-                    <div>
-                        <strong>Mar&iacute;a G.</strong><br />
-                        <small>Guadalajara, Jal.</small>
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Mariana Hern&aacute;ndez" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/3.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Mariana Hern&aacute;ndez</strong><br />
+                            <small>Doctora</small>
+                        </div>
                     </div>
+
+                    <p class="mb-0" style="text-align: left;">Yo ya ten&iacute;a seguro, pero mi p&oacute;liza
+                        hab&iacute;a subido much&iacute;simo y estaba pensando cancelarla. Aqu&iacute; me ayudaron a
+                        ajustar coberturas sin quedarme desprotegida. Se nota que conocen realmente el mercado de
+                        gastos m&eacute;dicos.</p>
                 </div>
+            </div>
 
-                <h5 class="font-weight-bold">Excelente atenci&oacute;n</h5>
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Luis Ramirez" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/4.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Luis Ramirez</strong><br />
+                            <small>Director Comercial</small>
+                        </div>
+                    </div>
 
-                <p>&ldquo;Excelente acompa&ntilde;amiento: en 24 horas tuve opciones claras y la mejor tarifa para mi
-                    familia.&rdquo;</p>
+                    <p class="mb-0" style="text-align: left;">Algo que me dio mucha confianza fue que
+                        respondieron todas mis dudas con paciencia y sin presionarme. La plataforma para cotizar es
+                        s&uacute;per pr&aacute;ctica y poder modificar deducibles y hospitales en tiempo real ayuda
+                        much&iacute;simo.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Jose Luis Ruiz" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/5.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Jose Luis Ruiz</strong><br />
+                            <small>Contador</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Hab&iacute;a intentado cotizar antes con otros
+                        agentes y todo era confuso y me hostigaban. Aqu&iacute; sent&iacute; transparencia desde el
+                        inicio. Me explicaron c&oacute;mo funciona realmente un seguro de gastos m&eacute;dicos y
+                        qu&eacute; deb&iacute;a considerar a largo plazo.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Javier Navarro" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/6.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Javier Navarro</strong><br />
+                            <small>Empresario</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Lo que m&aacute;s valor&eacute; fue la
+                        asesor&iacute;a personalizada. Analizaron mi situaci&oacute;n, mi presupuesto y mis necesidades
+                        reales antes de recomendarme una opci&oacute;n. Hoy me siento mucho m&aacute;s tranquilo
+                        sabiendo que tengo una estructura bien hecha.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Sofia Herrera" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/7.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Sofia Herrera</strong><br />
+                            <small>Abogada</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">La p&aacute;gina transmite profesionalismo desde
+                        el primer momento. El proceso de cotizaci&oacute;n es r&aacute;pido, intuitivo y muy claro.
+                        Adem&aacute;s, el acompa&ntilde;amiento posterior hace toda la diferencia.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Ricardo Gomez" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/8.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Ricardo Gomez</strong><br />
+                            <small>Dise&ntilde;ador Gr&aacute;fico</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">No sab&iacute;a absolutamente nada sobre seguros
+                        m&eacute;dicos y pens&eacute; que ser&iacute;a complicado. Termin&eacute; entendiendo
+                        deducibles, coaseguros y coberturas gracias a la forma tan sencilla en la que explican
+                        todo.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Valeria Hurtado" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/9.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Valeria Hurtado</strong><br />
+                            <small>&nbsp;</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Se siente diferente a la t&iacute;pica experiencia
+                        de venta. Aqu&iacute; realmente buscan ayudarte a tomar una buena decisi&oacute;n.
+                        Compar&eacute; varias aseguradoras y encontr&eacute; una opci&oacute;n mucho m&aacute;s
+                        completa de lo que esperaba.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="Daniel Ortega" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/10.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Daniel Ortega</strong><br />
+                            <small>Consultor de Negocios</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">El cotizador en l&iacute;nea fue lo que
+                        inicialmente me llam&oacute; la atenci&oacute;n, pero la asesor&iacute;a fue lo que
+                        termin&oacute; convenci&eacute;ndome. Tener claridad sobre qu&eacute; cubre y qu&eacute; no
+                        cubre una p&oacute;liza da much&iacute;sima tranquilidad.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/1.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Andrea L&oacute;pez</strong><br />
+                            <small>Arquitecta</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Llevaba semanas intentando entender diferencias
+                        entre aseguradoras y deducibles, pero en esta p&aacute;gina pude comparar todo de forma muy
+                        clara. Lo que m&aacute;s me gust&oacute; fue que no intentaron venderme lo m&aacute;s
+                        caro, sino el que realmente me conven&iacute;a.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/2.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Carlos M&eacute;ndez</strong><br />
+                            <small>Ingeniero Industrial</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">La experiencia fue much&iacute;simo m&aacute;s
+                        sencilla de lo que imaginaba. Pude cotizar varias alternativas y despu&eacute;s recib&iacute;
+                        una asesor&iacute;a muy personalizada. Me explicaron mis dudas y se adaptaron a mi
+                        presupuesto.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/3.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Mariana Hern&aacute;ndez</strong><br />
+                            <small>Doctora</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Yo ya ten&iacute;a seguro, pero mi p&oacute;liza
+                        hab&iacute;a subido much&iacute;simo y estaba pensando cancelarla. Aqu&iacute; me ayudaron a
+                        ajustar coberturas sin quedarme desprotegida. Se nota que conocen realmente el mercado de
+                        gastos m&eacute;dicos.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/4.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Luis Ramirez</strong><br />
+                            <small>Director Comercial</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Algo que me dio mucha confianza fue que
+                        respondieron todas mis dudas con paciencia y sin presionarme. La plataforma para cotizar es
+                        s&uacute;per pr&aacute;ctica y poder modificar deducibles y hospitales en tiempo real ayuda
+                        much&iacute;simo.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/5.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Jose Luis Ruiz</strong><br />
+                            <small>Contador</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Hab&iacute;a intentado cotizar antes con otros
+                        agentes y todo era confuso y me hostigaban. Aqu&iacute; sent&iacute; transparencia desde el
+                        inicio. Me explicaron c&oacute;mo funciona realmente un seguro de gastos m&eacute;dicos y
+                        qu&eacute; deb&iacute;a considerar a largo plazo.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/6.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Javier Navarro</strong><br />
+                            <small>Empresario</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Lo que m&aacute;s valor&eacute; fue la
+                        asesor&iacute;a personalizada. Analizaron mi situaci&oacute;n, mi presupuesto y mis necesidades
+                        reales antes de recomendarme una opci&oacute;n. Hoy me siento mucho m&aacute;s tranquilo
+                        sabiendo que tengo una estructura bien hecha.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/7.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Sofia Herrera</strong><br />
+                            <small>Abogada</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">La p&aacute;gina transmite profesionalismo desde
+                        el primer momento. El proceso de cotizaci&oacute;n es r&aacute;pido, intuitivo y muy claro.
+                        Adem&aacute;s, el acompa&ntilde;amiento posterior hace toda la diferencia.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/8.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Ricardo Gomez</strong><br />
+                            <small>Dise&ntilde;ador Gr&aacute;fico</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">No sab&iacute;a absolutamente nada sobre seguros
+                        m&eacute;dicos y pens&eacute; que ser&iacute;a complicado. Termin&eacute; entendiendo
+                        deducibles, coaseguros y coberturas gracias a la forma tan sencilla en la que explican
+                        todo.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/9.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Valeria Hurtado</strong><br />
+                            <small>&nbsp;</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">Se siente diferente a la t&iacute;pica experiencia
+                        de venta. Aqu&iacute; realmente buscan ayudarte a tomar una buena decisi&oacute;n.
+                        Compar&eacute; varias aseguradoras y encontr&eacute; una opci&oacute;n mucho m&aacute;s
+                        completa de lo que esperaba.</p>
+                </div>
+            </div>
+
+            <div class="testimonio-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <div class="d-flex align-items-center mb-3"><img alt="" class="rounded-circle mr-3"
+                            src="/images_post/images/testimonios/10.png"
+                            style="width: 50px; height: 50px; object-fit: cover;" />
+                        <div>
+                            <strong>Daniel Ortega</strong><br />
+                            <small>Consultor de Negocios</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-0" style="text-align: left;">El cotizador en l&iacute;nea fue lo que
+                        inicialmente me llam&oacute; la atenci&oacute;n, pero la asesor&iacute;a fue lo que
+                        termin&oacute; convenci&eacute;ndome. Tener claridad sobre qu&eacute; cubre y qu&eacute; no
+                        cubre una p&oacute;liza da much&iacute;sima tranquilidad.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -351,6 +715,305 @@
                             preséntate en un hospital de la red y nosotros te acompa&ntilde;amos en todo el
                             tr&aacute;mite.</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- QUIENES SOMOS / QUE HACEMOS -->
+
+<div class="container mb-5 pt-4">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm p-4 h-100" style="border-radius: 25px; background-color: #f5f5f5; border: none;">
+                <h2 class="mt-0">&iquest;Qui&eacute;nes <span style="color: var(--azul-main-title);">Somos</span>?</h2>
+                <div class="my-3"><img alt="Qui&eacute;nes Somos" class="img-fluid"
+                        src="/images_post/images/Captura%20de%20Pantalla%202023-09-01%20a%20la(s)%2018_22_34.png"
+                        style="border-radius: 15px; width: 100%;" /></div>
+
+                <p>Somos especialistas en Seguros de Gastos M&eacute;dicos Mayores con <strong>m&aacute;s de 40
+                        a&ntilde;os de experiencia</strong> ayudando a personas y familias a proteger su salud y
+                    patrimonio.</p>
+
+                <p>Combinamos experiencia humana con herramientas modernas de cotizaci&oacute;n y comparaci&oacute;n
+                    para ayudarte a entender, evaluar y elegir la opci&oacute;n que mejor se adapte a tus necesidades.
+                </p>
+
+                <p class="mb-0">Atendemos clientes en toda la Rep&uacute;blica Mexicana con una asesor&iacute;a cercana,
+                    transparente y personalizada, acompa&ntilde;&aacute;ndote antes, durante y despu&eacute;s de
+                    contratar tu p&oacute;liza.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm p-4 h-100" style="border-radius: 25px; background-color: #f5f5f5; border: none;">
+                <h2 class="mt-0">&iquest;Qu&eacute; <span style="color: var(--azul-main-title);">Hacemos</span>?</h2>
+                <div class="my-3"><img alt="Qu&eacute; Hacemos" class="img-fluid"
+                        src="/images_post/images/Captura%20de%20Pantalla%202023-09-01%20a%20la(s)%2018_26_51.png"
+                        style="border-radius: 15px; width: 100%;" /></div>
+
+                <p>Te ayudamos a comparar diferentes aseguradoras, planes, deducibles y coberturas de manera clara y
+                    sencilla para que puedas tomar una decisi&oacute;n informada y con confianza.</p>
+
+                <p>Nuestro objetivo no es venderte cualquier p&oacute;liza, sino ayudarte a encontrar una
+                    protecci&oacute;n que realmente haga sentido para ti, tu familia y tu presupuesto.</p>
+
+                <p class="mb-0">Adem&aacute;s de la contrataci&oacute;n, te acompa&ntilde;amos en el seguimiento de tu
+                    p&oacute;liza, renovaciones, dudas y procesos relacionados con siniestros, brind&aacute;ndote apoyo
+                    y orientaci&oacute;n cuando m&aacute;s lo necesites.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NUESTROS VALORES -->
+
+<style>
+    .valores-carousel {
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+    .valores-track {
+        display: flex;
+        align-items: stretch;
+        width: max-content;
+        animation: valores-scroll-right 120s linear infinite;
+    }
+    .valores-track .valor-item {
+        flex-shrink: 0;
+        width: 320px;
+        padding: 0 0.75rem;
+        display: flex;
+    }
+    .valores-track .valor-item .card {
+        width: 100%;
+        border-radius: 25px !important;
+        background: linear-gradient(180deg, rgba(210,240,245,1) 0%, rgba(255,255,255,1) 100%) !important;
+        box-shadow: none !important;
+    }
+    @keyframes valores-scroll-right {
+        from { transform: translateX(-50%); }
+        to { transform: translateX(0); }
+    }
+</style>
+
+<div class="mb-5 pt-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="d-inline-block px-4 py-2 mb-3" style="background-color: #f5f5f5; border-radius: 50px;">Nuestros
+                Valores</h2>
+        </div>
+
+        <p class="text-center">&Eacute;stas son algunos de nuestros valores que reflejamos al otorgarte nuestro
+            servicio:</p>
+    </div>
+
+    <div class="valores-carousel">
+        <div class="valores-track">
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Transparencia</h4>
+
+                    <p class="mb-0" style="text-align: left;">Te explicamos c&oacute;mo funciona tu p&oacute;liza de
+                        forma clara y sencilla. Coberturas, deducibles, exclusiones y alcances, sin letras chiquitas
+                        ni informaci&oacute;n confusa. Queremos que tomes decisiones con confianza y entendiendo
+                        realmente lo que est&aacute;s contratando.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Asesor&iacute;a Personalizada</h4>
+
+                    <p class="mb-0" style="text-align: left;">Cada persona, familia y presupuesto son diferentes.
+                        Analizamos tus necesidades para ayudarte a encontrar una opci&oacute;n que realmente se adapte
+                        a ti, sin buscar venderte coberturas innecesarias.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Prevenci&oacute;n</h4>
+
+                    <p class="mb-0" style="text-align: left;">Creemos que un seguro es una herramienta para proteger
+                        tu estabilidad, tu salud y tu patrimonio antes de que ocurra un problema. Nuestro objetivo es
+                        ayudarte a prevenir, planear y sentir mayor tranquilidad a largo plazo.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Experiencia</h4>
+
+                    <p class="mb-0" style="text-align: left;">M&aacute;s de 40 a&ntilde;os de experiencia nos
+                        respaldan. Combinamos conocimiento del sector asegurador con herramientas modernas de
+                        comparaci&oacute;n y cotizaci&oacute;n para brindarte una asesor&iacute;a profesional, clara y
+                        actualizada.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Claridad</h4>
+
+                    <p class="mb-0" style="text-align: left;">Sabemos que los seguros pueden parecer complejos. Por
+                        eso traducimos t&eacute;rminos t&eacute;cnicos y procesos complicados en explicaciones simples
+                        y f&aacute;ciles de entender para que te sientas seguro en cada decisi&oacute;n.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Cercan&iacute;a Humana</h4>
+
+                    <p class="mb-0" style="text-align: left;">Nos importa construir relaciones de confianza a largo
+                        plazo. Queremos acompa&ntilde;arte desde la cotizaci&oacute;n hasta el momento en que
+                        necesites utilizar tu p&oacute;liza, brind&aacute;ndote atenci&oacute;n cercana y apoyo real.
+                    </p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Compromiso</h4>
+
+                    <p class="mb-0" style="text-align: left;">Nuestro trabajo no termina cuando contratas una
+                        p&oacute;liza. Nos comprometemos a darte seguimiento, resolver tus dudas y ayudarte durante
+                        todo el tiempo que est&eacute;s asegurado.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Confianza</h4>
+
+                    <p class="mb-0" style="text-align: left;">Buscamos que te sientas respaldado en cada etapa del
+                        proceso. Miles de personas llegan con dudas e incertidumbre; nuestra prioridad es ayudarte a
+                        tomar decisiones con seguridad y tranquilidad.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Educaci&oacute;n Financiera</h4>
+
+                    <p class="mb-0" style="text-align: left;">Creemos que entender c&oacute;mo proteger tu salud y
+                        patrimonio es parte de construir una mejor estabilidad financiera. Por eso buscamos orientarte
+                        y ayudarte a tomar decisiones m&aacute;s informadas para tu futuro.</p>
+                </div>
+            </div>
+
+            <div class="valor-item">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Tecnolog&iacute;a y Comparaci&oacute;n</h4>
+
+                    <p class="mb-0" style="text-align: left;">Utilizamos herramientas modernas de cotizaci&oacute;n y
+                        comparaci&oacute;n para ayudarte a evaluar distintas opciones de manera r&aacute;pida,
+                        transparente y pr&aacute;ctica, facilitando una mejor elecci&oacute;n para ti y tu familia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Transparencia</h4>
+
+                    <p class="mb-0" style="text-align: left;">Te explicamos c&oacute;mo funciona tu p&oacute;liza de
+                        forma clara y sencilla. Coberturas, deducibles, exclusiones y alcances, sin letras chiquitas
+                        ni informaci&oacute;n confusa. Queremos que tomes decisiones con confianza y entendiendo
+                        realmente lo que est&aacute;s contratando.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Asesor&iacute;a Personalizada</h4>
+
+                    <p class="mb-0" style="text-align: left;">Cada persona, familia y presupuesto son diferentes.
+                        Analizamos tus necesidades para ayudarte a encontrar una opci&oacute;n que realmente se adapte
+                        a ti, sin buscar venderte coberturas innecesarias.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Prevenci&oacute;n</h4>
+
+                    <p class="mb-0" style="text-align: left;">Creemos que un seguro es una herramienta para proteger
+                        tu estabilidad, tu salud y tu patrimonio antes de que ocurra un problema. Nuestro objetivo es
+                        ayudarte a prevenir, planear y sentir mayor tranquilidad a largo plazo.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Experiencia</h4>
+
+                    <p class="mb-0" style="text-align: left;">M&aacute;s de 40 a&ntilde;os de experiencia nos
+                        respaldan. Combinamos conocimiento del sector asegurador con herramientas modernas de
+                        comparaci&oacute;n y cotizaci&oacute;n para brindarte una asesor&iacute;a profesional, clara y
+                        actualizada.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Claridad</h4>
+
+                    <p class="mb-0" style="text-align: left;">Sabemos que los seguros pueden parecer complejos. Por
+                        eso traducimos t&eacute;rminos t&eacute;cnicos y procesos complicados en explicaciones simples
+                        y f&aacute;ciles de entender para que te sientas seguro en cada decisi&oacute;n.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Cercan&iacute;a Humana</h4>
+
+                    <p class="mb-0" style="text-align: left;">Nos importa construir relaciones de confianza a largo
+                        plazo. Queremos acompa&ntilde;arte desde la cotizaci&oacute;n hasta el momento en que
+                        necesites utilizar tu p&oacute;liza, brind&aacute;ndote atenci&oacute;n cercana y apoyo real.
+                    </p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Compromiso</h4>
+
+                    <p class="mb-0" style="text-align: left;">Nuestro trabajo no termina cuando contratas una
+                        p&oacute;liza. Nos comprometemos a darte seguimiento, resolver tus dudas y ayudarte durante
+                        todo el tiempo que est&eacute;s asegurado.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Confianza</h4>
+
+                    <p class="mb-0" style="text-align: left;">Buscamos que te sientas respaldado en cada etapa del
+                        proceso. Miles de personas llegan con dudas e incertidumbre; nuestra prioridad es ayudarte a
+                        tomar decisiones con seguridad y tranquilidad.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Educaci&oacute;n Financiera</h4>
+
+                    <p class="mb-0" style="text-align: left;">Creemos que entender c&oacute;mo proteger tu salud y
+                        patrimonio es parte de construir una mejor estabilidad financiera. Por eso buscamos orientarte
+                        y ayudarte a tomar decisiones m&aacute;s informadas para tu futuro.</p>
+                </div>
+            </div>
+
+            <div class="valor-item" aria-hidden="true">
+                <div class="card shadow-sm p-4" style="border-radius: 15px; background-color: #f5f5f5; border: none;">
+                    <h4 class="mt-0" style="color: var(--azul-main-title);">Tecnolog&iacute;a y Comparaci&oacute;n</h4>
+
+                    <p class="mb-0" style="text-align: left;">Utilizamos herramientas modernas de cotizaci&oacute;n y
+                        comparaci&oacute;n para ayudarte a evaluar distintas opciones de manera r&aacute;pida,
+                        transparente y pr&aacute;ctica, facilitando una mejor elecci&oacute;n para ti y tu familia.
+                    </p>
                 </div>
             </div>
         </div>
