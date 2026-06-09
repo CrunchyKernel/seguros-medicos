@@ -1,3 +1,80 @@
+<style type="text/css">
+	/* ---- Cotizador custom styling ---- */
+
+	/* Trim the large default top padding of the section */
+	#cotizador.section-padding {
+		padding-top: 0;
+	}
+
+	/* Card-like background, matching the "Cotiza tu seguro en minutos" section */
+	#cotizador .contact2-form {
+		background: linear-gradient(180deg, rgba(210, 240, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+		border-radius: 25px;
+		padding: 1.5rem 2.5rem 2.5rem;
+	}
+
+	/* Remove the leading margin above the first section title */
+	#cotizador .contact2-form .col > .form-group:first-child {
+		margin-top: 0;
+	}
+
+	/* Tighten the gap between each section title and the fields below it */
+	#cotizador .contact2-form .form-group.row:has(> h3.text-6) {
+		margin-bottom: 0.25rem;
+	}
+
+	/* Add breathing room above subsequent section titles (not the first one) */
+	#cotizador .contact2-form .form-group.row:has(> h3.text-6):not(:first-child) {
+		margin-top: 2rem;
+	}
+
+	/* Stack each field's label above its input (instead of beside it) */
+	#cotizador .form-group.row > label.col-form-label {
+		flex: 0 0 100%;
+		max-width: 100%;
+		text-align: left;
+		padding-bottom: 0.25rem;
+		font-weight: 600;
+	}
+
+	#cotizador .form-group.row > label.col-form-label + [class*="col-"] {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	/* Rounded form fields */
+	#cotizador .form-control {
+		border-radius: 10px;
+	}
+
+	/* Submit button styled like the "Cotizar Ahora" button on the landing page */
+	#cotizador #next4 {
+		background-color: var(--azul-main-title);
+		color: #fff;
+		border: none;
+		border-radius: 25px;
+		padding: 0.5rem 1.5rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+
+	#cotizador #next4:hover,
+	#cotizador #next4:focus {
+		background-color: var(--azul-main-title);
+		color: #fff;
+		opacity: 0.9;
+	}
+
+	/* Smaller section titles (e.g. "Mis datos personales") with a subtle divider */
+	#cotizador .contact2-form h3.text-6 {
+		flex: 0 0 100%;
+		width: 100%;
+		font-size: 1rem;
+		margin-top: 0;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+</style>
 <section id="cotizador" class="section-padding">
 	<div class="container">
 		<div class="row">
