@@ -75,6 +75,40 @@
 	{{HTML::style('porto/css/custom.css')}}
 	{{HTML::style('porto/css/estilo.css?20240125')}}
 
+	<!-- Center the main nav between the logo and the "Cotiza tu seguro" button -->
+	<style type="text/css">
+		@media (min-width: 992px) {
+			/* Logo takes only its own width */
+			#header .header-column:first-child {
+				flex: 0 0 auto;
+			}
+
+			/* Nav column fills the remaining space */
+			#header .header-column.justify-content-end {
+				flex: 1 1 auto;
+			}
+
+			#header .header-column.justify-content-end > .header-row {
+				flex-grow: 1;
+				justify-content: flex-start;
+			}
+
+			/* Make the nav wrapper a full-width flex row */
+			#header .header-nav.header-nav-line {
+				display: flex;
+				align-items: center;
+				flex-grow: 1;
+				width: 100%;
+			}
+
+			/* Center the menu, push the button to the far right */
+			#header .header-nav.header-nav-line .header-nav-main {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	</style>
+
 	<!-- Head Libs -->
 	{{HTML::script('porto/vendor/modernizr/modernizr.min.js')}}
 
@@ -288,9 +322,6 @@ else {
 											</ul>
 										</nav>
 									</div>
-									<a href="{{URL::to('/cotizador')}}"
-										class="btn btn-outline btn-rounded btn-primary text-1 ml-3 btnCotizador bntContactar">Contactar
-										un Asesor</a>
 									<a href="{{URL::to('/cotizador')}}"
 										class="btn btn-rounded btn-primary text-1 ml-3 btnCotizador">Cotiza tu
 										seguro</a>
