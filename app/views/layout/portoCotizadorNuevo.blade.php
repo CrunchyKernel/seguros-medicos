@@ -6,6 +6,11 @@
 		padding-top: 0;
 	}
 
+	/* Constrain the overall component width */
+	#cotizador .container {
+		max-width: 720px;
+	}
+
 	/* Card-like background, matching the "Cotiza tu seguro en minutos" section */
 	#cotizador .contact2-form {
 		background: linear-gradient(180deg, rgba(210, 240, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
