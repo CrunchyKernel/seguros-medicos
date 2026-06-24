@@ -102,7 +102,7 @@ function doTabla(data){
 		$.each(data.tablaDatos.sa_db.datos.aseguradoras, function(i, a){
 			_p += a.paquetes;
 		});
-		el += '<th colspan="' + _p + '" class="text-right"><a href="#" class="btn btn-outline btn-rounded btn-primary text-1 font-weight-bold text-uppercase nivel-amplio">COTIZAR NIVEL SUPERIOR <i class="fa fa-arrow-right"></i></a></th></tr><tr><th>&nbsp;</th>';
+		el += '<th colspan="' + _p + '" class="text-right"><a href="#" class="btn btn-outline btn-rounded btn-primary text-1 font-weight-bold nivel-amplio">Cotizar nivel superior <i class="fa fa-arrow-right"></i></a></th></tr><tr><th>&nbsp;</th>';
 	}
 	// Logotipos
 	$.each(data.tablaDatos.sa_db.datos.aseguradoras, function(i, a){
@@ -353,7 +353,7 @@ function doMTabla(data){
 		// Paquetes
 		el += '<div class="row">';
 		for(x=1;x<=a.paquetes;x++){
-			el += '<div class="col text-right text-primary"><strong>' + data.tablaDatos.sa_db.datos.tablas[p][2] + '</strong></div>';
+			el += '<div class="col text-right text-azul m-plan-titulo"><strong>' + data.tablaDatos.sa_db.datos.tablas[p][2] + '</strong></div>';
 			p++;
 		}
 		el += '</div>';
@@ -490,14 +490,25 @@ function doMTabla(data){
 		}
 		el += '</div>';
 		
+		// Botones "Me interesa" (uno por paquete)
+		var _pp = P;
+		for(x=1;x<=a.paquetes;x++){
+			var _h = data.tablaDatos.sa_db.datos.tablas[_pp][1];
+			var _pkg = data.tablaDatos.sa_db.datos.tablas[_pp][2];
+			el += '<div class="row mt-3"><div class="col">';
+			el += '<a href="/me-interesa/' + idCotizacion + '/' + secret + '/' + _h + '" class="btn btn-outline btn-primary font-weight-bold custom-btn-style-1 w-100 cmdMeInteresa" data-hospitales="' + _h + '">Me interesa ' + _pkg + '</a>';
+			el += '</div></div>';
+			_pp++;
+		}
+
 		// Boton para imprimir
-		el += '<div class="row mb-5 mt-5"><div class="col text-center">';
-		el += '<a href="#" class="btn btn-xl btn-outline btn-rounded btn-primary text-1 ml-3 font-weight-bold text-uppercase btnPrint" target="_blank"><i class="fa fa-print"></i> IMPRIMIR</a>';
+		el += '<div class="row mb-5 mt-3"><div class="col text-center">';
+		el += '<a href="#" class="btn btn-xl btn-outline btn-rounded btn-primary text-1 ml-3 font-weight-bold btnPrint" target="_blank"><i class="fa fa-print"></i> Imprimir</a>';
 		el += '</div></div>';
-		
+
 		// Notas
 		if(a.movil!=null){
-			el += '<div class="div class="row mt-5 mb-5">' + a.movil + '</div>';
+			el += '<div class="row mt-5 mb-5"><div class="col">' + a.movil + '</div></div>';
 		}
 		
 		P = p;
