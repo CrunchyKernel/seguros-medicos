@@ -1,7 +1,117 @@
 @extends('layout.porto')
 
 @section('contenido')
-	<div class="container">
+	<style type="text/css">
+		/* --- Modernización "Me interesa" (lenguaje de diseño azul de marca) --- */
+		/* Tarjetas con esquinas redondeadas y sombra sutil */
+		#me-interesa .card {
+			border: none;
+			border-radius: 16px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+			overflow: hidden;
+		}
+
+		/* Encabezados de tarjeta rellenos con el azul de marca (redondeo solo arriba) */
+		#me-interesa .card-header {
+			background-color: #0697b4;
+			color: #ffffff;
+			font-weight: 600;
+			border-bottom: none;
+			border-radius: 16px 16px 0 0;
+			padding: 0.85rem 1.25rem;
+		}
+
+		/* El cuerpo redondea solo las esquinas inferiores (arriba recto, sin radio) */
+		#me-interesa .card-body {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 16px;
+			border-bottom-right-radius: 16px;
+		}
+
+		/* Igualar la altura de las tarjetas en la misma fila */
+		#me-interesa .row > [class*="col-"] > .card.h-100 {
+			height: 100%;
+		}
+
+		/* Todas las imágenes con esquinas redondeadas */
+		#me-interesa img {
+			border-radius: 12px;
+		}
+
+		/* Pestañas de formas de pago */
+		#me-interesa .nav-tabs {
+			border-bottom: 1px solid rgba(6, 151, 180, 0.2);
+		}
+
+		#me-interesa .nav-tabs .nav-link {
+			color: #0697b4;
+			border: none;
+		}
+
+		#me-interesa .nav-tabs .nav-link.active {
+			color: #0697b4;
+			font-weight: 600;
+			background: transparent;
+			border: none;
+			border-bottom: 3px solid #0697b4;
+		}
+
+		/* Campos redondeados */
+		#me-interesa .form-control {
+			border-radius: 10px;
+		}
+
+		/* Botones tipo píldora con el azul de marca (texto blanco, incluso los outline) */
+		#me-interesa .btn-primary {
+			background-color: #0697b4;
+			border-color: #0697b4;
+			color: #ffffff;
+			border-radius: 25px;
+		}
+
+		#me-interesa .btn-primary:hover,
+		#me-interesa .btn-primary:focus {
+			background-color: #057e98;
+			border-color: #057e98;
+			color: #ffffff;
+		}
+
+		/* Solo la primera letra de los botones en mayúscula */
+		#me-interesa .btn {
+			text-transform: lowercase;
+		}
+
+		#me-interesa .btn::first-letter {
+			text-transform: uppercase;
+		}
+
+		/* Quitar todas las animaciones (incluye el contenido inyectado) */
+		#me-interesa .appear-animation {
+			opacity: 1 !important;
+			animation: none !important;
+			transform: none !important;
+		}
+
+		/* Icono de WhatsApp consistente con verPortoCotizacionNuevo (100x100, centrado) */
+		#me-interesa img[src*="whatsapp"] {
+			width: 100px;
+			height: 100px;
+			display: block;
+			margin: 1rem auto;
+			border-radius: 0;
+		}
+
+		/* Chevron de la tarjeta colapsable "Mostrar/Ocultar coberturas" */
+		#me-interesa [data-target="#coberturas-body"] .fa-chevron-down {
+			transition: transform 0.2s ease;
+		}
+
+		#me-interesa [data-target="#coberturas-body"]:not(.collapsed) .fa-chevron-down {
+			transform: rotate(180deg);
+		}
+	</style>
+	<div class="container" id="me-interesa">
 		<div class="row">
 			<div class="col-md-12 mt-5">
 				<div class="row">
@@ -55,7 +165,7 @@
 				</div>
 				<div class="row mt-3">
 					<div class="col-md-6">
-						<div class="card">
+						<div class="card h-100">
 							<div class="card-header text-azul">
 								Formas de pago
 							</div>
@@ -92,7 +202,7 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="card">
+						<div class="card h-100">
 							<div class="card-header text-azul">
 								Contactenme
 							</div>
@@ -123,8 +233,9 @@
 				<div class="row mt-3">
 					<div class="col">
 						<div class="card">
-							<div class="card-header text-azul" data-toggle="collapse" data-target="#coberturas-body" style="cursor:pointer;">
-								Mostrar/Ocultar coberturas
+							<div class="card-header text-azul d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#coberturas-body" style="cursor:pointer;">
+								<span>Mostrar/Ocultar coberturas</span>
+								<i class="fa fa-chevron-down"></i>
 							</div>
 							<div class="card-body collapse" id="coberturas-body">
 								<div class="row">

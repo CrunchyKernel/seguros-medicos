@@ -79,6 +79,47 @@
 	#tblCotizacion.table-hover tbody tr[data-tipo="contado-top"]:hover th {
 		background-color: #fff;
 	}
+
+	/* --- Formulario "Este Plan me agrada más" (mismo estilo que el cotizador) --- */
+	/* Panel tipo tarjeta con degradado */
+	#frmCotizacionContacto {
+		background: linear-gradient(180deg, rgba(210, 240, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+		border-radius: 25px;
+		padding: 1.5rem 2.5rem 2.5rem;
+	}
+
+	/* Títulos de sección con un divisor sutil */
+	#frmCotizacionContacto>.form-row>label {
+		width: 100%;
+		font-size: 1rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	/* Campos redondeados */
+	#frmCotizacionContacto .form-control {
+		border-radius: 10px;
+	}
+
+	/* Botón de envío estilo "Cotizar Ahora" */
+	#frmCotizacionContacto button[type="submit"] {
+		background-color: var(--azul-main-title);
+		color: #fff;
+		border: none;
+		border-radius: 25px;
+		padding: 0.5rem 1.5rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+
+	#frmCotizacionContacto button[type="submit"]:hover,
+	#frmCotizacionContacto button[type="submit"]:focus {
+		background-color: var(--azul-main-title);
+		color: #fff;
+		opacity: 0.9;
+	}
 </style>
 <div class="steps-toggler text-azul d-flex justify-content-center align-items-center hand steps-open"
 	data-toggle="collapse" data-target="#steps">
@@ -210,7 +251,7 @@
 							<label><b>Este Plan me agrada más</b></label>
 						</div>
 						<div class="form-row">
-							<div class="col-lg-4 offset-lg-4" id="ccPaquetes">
+							<div class="col" id="ccPaquetes">
 
 							</div>
 						</div>
@@ -235,7 +276,7 @@
 						</div>
 						<div class="form-row">
 							<div class="col text-center">
-								<button type="submit" class="btn btn-primary">MAYOR INFORMACIÓN</button>
+								<button type="submit" class="btn btn-primary">Mayor Informaci&oacute;n</button>
 							</div>
 						</div>
 					</form>
