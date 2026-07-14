@@ -403,6 +403,10 @@ function doMTabla(data){
 			_line = i;
 		});
 		
+		// Enlace para mostrar/ocultar los pagos diferidos (igual que en escritorio)
+		el += '<div class="row mt-2 m-cabecera-diferidos hand"><div class="col text-center text-azul font-weight-bold" style="text-decoration: underline;">Mostrar pagos diferidos</div></div>';
+		el += '<div class="m-pagos-diferidos d-none">';
+
 		// Pago semestral
 		p = P;
 		_line++;
@@ -490,6 +494,9 @@ function doMTabla(data){
 		}
 		el += '</div>';
 		
+		// Cierra el contenedor de pagos diferidos
+		el += '</div>';
+
 		// Botones "Me interesa" (uno por paquete)
 		var _pp = P;
 		for(x=1;x<=a.paquetes;x++){
@@ -652,7 +659,11 @@ $.ajax({
 			$(".cabecera-diferidos").addClass("d-none");
 			$(".pagos-diferidos").removeClass("d-none");
 		});
-		
+		$("body").on("click", ".m-cabecera-diferidos", function(){
+			$(".m-cabecera-diferidos").addClass("d-none");
+			$(".m-pagos-diferidos").removeClass("d-none");
+		});
+
 		DATA = data;
 		$.each(DATA.tablaDatos.sa_db.datos.aseguradoras, function(_z, _a){
 			if(_a.id==2){

@@ -60,6 +60,11 @@
 		font-size: 1.25rem;
 	}
 
+	/* Valores/precios de la tabla móvil en el mismo azul que en escritorio */
+	#m-tabla .row .col.text-right {
+		color: #0697b4;
+	}
+
 	/* Striping más limpio usando el azul de marca en lugar del gris pesado */
 	#m-tabla .bg-gris-claro {
 		background-color: rgba(6, 151, 180, 0.08);
@@ -304,5 +309,5 @@
 @stop
 
 @section('js')
-<script src="/assets/js/helpers/verPortoCotizacionNuevo.js?2026062302"></script>
+<script src="/assets/js/helpers/verPortoCotizacionNuevo.js?2026071301"></script>
 @stop
