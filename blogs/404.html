@@ -1,0 +1,77 @@
+<style>
+    /* Extra breathing room between top-level sections */
+    .container.mb-5,
+    .card.mb-5,
+    div.mb-5.pt-4 {
+        margin-bottom: 5rem !important;
+    }
+
+    /* El ancla del cotizador no queda oculta bajo el men&uacute; fijo */
+    #cotizador-ps {
+        scroll-margin-top: 120px;
+    }
+
+    /* N&uacute;mero grande del error */
+    .e404-code {
+        display: block;
+        width: 100%;
+        font-size: 6rem;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--azul-main-title);
+        margin-bottom: 0.5rem;
+        text-align: center !important;
+    }
+
+    @media (min-width: 768px) {
+        .e404-code {
+            font-size: 8rem;
+        }
+    }
+
+    /* Cotizador m&aacute;s ancho y centrado */
+    #cotizador-ps #cotizador .container {
+        max-width: 960px;
+    }
+
+    #cotizador-ps #cotizador .container > .row {
+        justify-content: center;
+    }
+
+    #cotizador-ps #cotizador .contact2-form {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+</style>
+<!-- HERO -->
+
+<div class="card shadow-sm mb-5"
+    style="border-radius: 25px; border: none; background: linear-gradient(180deg, rgba(255,255,255,1) 0%, #B4E0E8 100%);">
+    <div class="px-4 px-md-5 py-5 text-center">
+        <div class="container">
+            <p class="e404-code mb-2">404</p>
+
+            <h1 class="mt-0">No encontramos la p&aacute;gina que buscabas</h1>
+
+            <p class="lead mx-auto" style="max-width: 640px;">Es posible que el enlace haya cambiado de lugar o que ya no
+                exista. No te preocupes, aqu&iacute; abajo est&aacute; todo lo que necesitas para seguir adelante.</p>
+
+            <p class="mt-4 mb-0 text-center"><a class="btn btn-lg mr-2 mb-2" href="/"
+                    style="border-radius: 25px; background-color: var(--azul-main-title); color: #fff;">Regresa al
+                    inicio</a> <a class="btn btn-lg mb-2" href="#cotizador-ps"
+                    style="border-radius: 25px; background-color: #fff; color: var(--azul-main-title);">Cotiza tu
+                    seguro</a></p>
+        </div>
+    </div>
+</div>
+<!-- COTIZADOR -->
+
+<div class="mb-5 pt-4" id="cotizador-ps">
+    <h2 class="text-center">O cotiza tu seguro a continuaci&oacute;n</h2>
+
+    <p class="text-center mx-auto" style="max-width: 640px;">Completa el siguiente formulario y recibe tu
+        cotizaci&oacute;n personalizada.</p>
+
+    <div style="width: 100%;">{{$cotizador-nuevo}}</div>
+</div>
